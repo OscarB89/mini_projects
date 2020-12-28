@@ -6,18 +6,32 @@
 
 # Write a program that takes a start year and an end year and returns an array of all the leap years between.
 # Write a program that when given a year, will return the closest leap year (this could be before or after the given year)
+#
+# def leap_year(start_year, end_year)
+#   (start_year..end_year).select do |yr|
+#     yr % 400 == 0 || (yr % 100 != 0 && yr % 4 == 0)
+#     #   puts true
+#     # elsif (yr % 100 == 0 && yr % 400 != 0) || yr % 4 != 0
+#     #   puts false
+#   end
+# end
+#     # elsif number % 100 != 0 && number % 4 == 0
+#     #   puts true
+#     # elsif number % 4 != 0
+#     #   puts false
+#
+# puts leap_year(1970, 2000).inspect
 
-def leap_year(start_year, end_year)
-  (start_year..end_year).select do |yr|
-    yr % 400 == 0 || (yr % 100 != 0 && yr % 4 == 0)
-    #   puts true
-    # elsif (yr % 100 == 0 && yr % 400 != 0) || yr % 4 != 0
-    #   puts false
-  end
+def leap_year(year)
+year = year
+ while true do
+   if year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)
+    puts year
+    break
+   else
+     year = year + 1
+   end
+ end
 end
-    # elsif number % 100 != 0 && number % 4 == 0
-    #   puts true
-    # elsif number % 4 != 0
-    #   puts false
 
-puts leap_year(1970, 2000).inspect
+puts leap_year(2005)
