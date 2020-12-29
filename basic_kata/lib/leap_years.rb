@@ -22,16 +22,14 @@
 #
 # puts leap_year(1970, 2000).inspect
 
-def leap_year(year)
-year = year
- while true do
-   if year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)
-    puts year
-    break
-   else
-     year = year + 1
-   end
- end
+def leap_years(year)
+  year = year
+  while true do
+    if year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)
+      return year
+      break
+    else
+      year = year + 1
+    end
+  end
 end
-
-puts leap_year(2005)
